@@ -27,4 +27,8 @@ public class ProductService
         List<ProductRecord> products =productRepository.findByProductCodeOrProductName(productCode,productName);
         return products;
     }
+    public List<ProductRecord> searchProd(String productCode) {
+        List<ProductRecord> products =productRepository.findByProductCode(productCode);
+        return products;
+    }
 }

@@ -37,6 +37,7 @@ public class UserController {
             if (user.getUsername() != null && user.getPassword() != null) {
                 Cookie loginCookie = new Cookie(user.getUsername(), user.getPassword());
                 loginCookie.setMaxAge(30 * 5);
+                loginCookie.setPath("/user");
                 response.addCookie(loginCookie);
                 return "Cookie Set: " + loginCookie;
             }

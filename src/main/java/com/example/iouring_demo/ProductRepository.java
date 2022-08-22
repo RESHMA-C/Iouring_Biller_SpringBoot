@@ -15,5 +15,6 @@ import java.util.List;
 public interface ProductRepository extends CrudRepository<ProductRecord,Long>
 {
     List<ProductRecord> findByProductCodeOrProductName(String productCode,String ProductName);
+    List<ProductRecord> findByProductCode(String productCode);
 }
 
